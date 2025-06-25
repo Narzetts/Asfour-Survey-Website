@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ASFOUR 2025</title>
+  <link rel="icon" type="image/png" href="images/icon asfour.png">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* ===== Reset & Font ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background: url('images/asfour.png') no-repeat center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      position: relative;
+    }
+
+    /* ===== Landing Page ===== */
+    .landing-page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: fadeIn 1s ease-out;
+      text-align: center;
+    }
+    .logo {
+      max-width: 300px;
+      margin-bottom: 20px;
+      filter: drop-shadow(0 0 6px rgba(0,0,0,0.4));
+    }
+    .button-29 {
+      background-image: radial-gradient(circle at top right, #5adaff 0, #5468ff 100%);
+      border: none;
+      border-radius: 30px;
+      color: #fff;
+      font-size: 16px;
+      padding: 14px 30px;
+      cursor: pointer;
+      transition: transform .3s, background .3s;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .button-29:hover {
+      transform: scale(1.05);
+      background-image: radial-gradient(circle at top right, #4bc3ef 0, #3d4fd0 100%);
+    }
+
+    /* ===== Loading Screen ===== */
+    .loading-screen {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+    }
+    .progress-bar {
+      width: 250px;
+      height: 15px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 10px;
+      overflow: hidden;
+      backdrop-filter: blur(5px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .progress-fill {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #F6C90E, #F7F7F7);
+      animation: fillProgress 2s forwards;
+    }
+
+    /* ===== Survey Form ===== */
+    .glass-container {
+      display: none;
+      width: 100%;
+      max-width: 650px;
+      padding: 2rem;
+      background: rgba(255,255,255,0.95);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: scaleUp .6s ease-out both;
+      position: relative;
+    }
+    .banner {
+      position: relative;
+      width: 100%;
+      padding-top: 37.5%;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 1rem;
+    }
+    .banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('images/BANNER ASFOUR.png') center/cover no-repeat;
+    }
+    .form-content {
+      padding: 0 30px;
+    }
+    .form-content h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 26px;
+      color: #303841;
+    }
+    .form-content label {
+      display: block;
+      margin: 10px 0 6px;
+      font-weight: 600;
+      color: #2E4750;
+    }
+    input[type="radio"] {
+      margin-right: 10px;
+      transform: scale(1.1);
+    }
+    textarea, input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #f7f7f7;
+      font-size: 14px;
+      resize: vertical;
+    }
+    .submit-wrapper {
+      text-align: center;
+      margin-top: 25px;
+    }
+
+    /* ===== Thank You Page ===== */
+    .thanks-page {
+      display: none;
+      max-width: 500px;
+      padding: 2rem;
+      background: rgba(255,255,255,0.95);
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      text-align: center;
+      animation: fadeIn .8s ease-out;
+    }
+    .thanks-page h1 {
+      font-size: 36px;
+      color: #303841;
+      margin-bottom: 12px;
+    }
+    .thanks-page p {
+      font-size: 18px;
+      color: #2E4750;
+    }
+    .thanks-icon {
+      font-size: 64px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== Tombol Home (gambar t.webp) & animasi pulse ===== */
+    .home-button {
+      display: none;
+      position: fixed;
+      top: 20px;
+      right: 20px;           /* dipindah ke kanan */
+      width: 48px;
+      height: 48px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      z-index: 1000;
+      animation: pulse 1.5s ease-in-out;
+    }
+    .home-button img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.5));
+    }
+
+    /* ===== Keyframes ===== */
+    @keyframes fillProgress { to { width: 100%; } }
+    @keyframes scaleUp {
+      0% { transform: scale(0.9); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50%      { transform: scale(1.1); }
+    }
+
+    /* ===== Responsiveness ===== */
+    @media (max-width: 600px) {
+      .form-content { padding: 0 20px; }
+      .form-content h2 { font-size: 22px; }
+      .logo { max-width: 220px; }
+    }
+
+    /* ===== Angkatan slide-down ===== */
+    #angkatanGroup {
+      max-height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: max-height .5s ease, opacity .5s ease;
+    }
+    #angkatanGroup.show {
+      max-height: 200px;
+      opacity: 1;
+    }
+
+  </style>
+</head>
+
+<body>
+  <!-- AUDIO BACKSOUND -->
+  <audio id="bg-music-1" src="music/【FULL】オーケストラ編曲 アニメ【チ。 ―地球の運動について―】OP サカナクション「怪獣」~Orchestra Ver.~ - ししょー's音楽ROOM.mp3" loop></audio>
+  <audio id="bg-music-2" src="-" loop></audio>
+
+  <!-- 1. Landing Page -->
+  <div class="landing-page" id="landing">
+    <img src="images/Desain tanpa judul.png" alt="Logo" class="logo">
+    <button class="button-29" onclick="playMusic()">𝗠𝗮𝘀𝘂𝗸</button>
+  </div>
+
+  <!-- 2. Loading Screen -->
+  <div class="loading-screen" id="loading">
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+    <p style="color:white; text-shadow:1px 1px 3px black;">Memuat survei...</p>
+  </div>
+
+  <!-- 3. Survey Form -->
+  <form id="formSurvei" class="glass-container" action="proses.php" method="POST" enctype="multipart/form-data">
+    <div class="banner"></div>
+    <div class="form-content">
+      <h2>𝗔𝘀𝗽𝗶𝗿𝗮𝘁𝗶𝗼𝗻 𝗼𝗳 𝗙𝗼𝘂𝗿 𝗠𝗠𝗫𝗫𝗩</h2>
+      <label>Anda mengisi survei ini sebagai…</label>
+      <label><input type="radio" name="makanan" value="Guru" onclick="toggleAngkatan(false)" required> Guru</label>
+      <label><input type="radio" name="makanan" value="Warga Sekolah" onclick="toggleAngkatan(false)" required> Warga Sekolah</label>
+      <label><input type="radio" name="makanan" value="Siswa" onclick="toggleAngkatan(true)" required> Siswa</label>
+      <label><input type="radio" name="makanan" value="Umum" onclick="toggleAngkatan(false)" required> Umum</label>
+
+      <div id="angkatanGroup">
+        <label>Angkatan</label>
+        <label><input type="radio" name="makan_perhari" value="A'23" > A'23</label>
+        <label><input type="radio" name="makan_perhari" value="A'24" > A'24</label>
+        <label><input type="radio" name="makan_perhari" value="A'25" > A'25</label>
+      </div>
+
+      <label>Sampaikan Aspirasimu..! 👊</label>
+      <textarea name="pengalaman" placeholder="Tulis di sini…" required></textarea>
+
+      <label>Lampirkan File Pendukung (Opsional)</label>
+      <input type="file" name="foto" accept="image/*">
+
+      <div class="submit-wrapper">
+        <button class="button-29" type="submit">𝗞𝗶𝗿𝗶𝗺
+</button>
+      </div>
+    </div>
+  </form>
+
+  <!-- 4. Thank You Page -->
+  <div class="thanks-page" id="thanks">
+    <div class="thanks-icon">✅</div>
+    <h1>Terima Kasih!</h1>
+    <p>Jawaban kamu telah berhasil dikirim. Kami sangat menghargai partisipasimu!</p>
+  </div>
+
+  <!-- 5. Tombol Home -->
+  <button class="home-button" id="btnHome" onclick="goHome()">
+    <img src="images/t.webp" alt="Home">
+  </button>
+
+  <script>
+    function playMusic() {
+      // Mainkan musik
+      const a1 = document.getElementById('bg-music-1');
+      const a2 = document.getElementById('bg-music-2');
+      a1.volume = 1; a2.volume = 0;
+      a1.play().catch(()=>{}); a2.play().catch(()=>{});
+
+      // Tampilkan loading
+      document.getElementById('landing').style.display = 'none';
+      document.getElementById('loading').style.display = 'flex';
+
+      // Setelah loading selesai, tampilkan form & tombol Home
+      setTimeout(() => {
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('formSurvei').style.display = 'block';
+        document.getElementById('btnHome').style.display = 'block';
+      }, 2100);
+    }
+
+    function toggleAngkatan(show) {
+      document.getElementById('angkatanGroup')
+        .classList[show ? 'add' : 'remove']('show');
+    }
+
+    function goHome() {
+      // Kembali ke landing page
+      document.getElementById('formSurvei').style.display = 'none';
+      document.getElementById('thanks').style.display = 'none';
+      document.getElementById('btnHome').style.display = 'none';
+      document.getElementById('landing').style.display = 'flex';
+      // Reset audio
+      const a1 = document.getElementById('bg-music-1');
+      const a2 = document.getElementById('bg-music-2');
+      a1.pause(); a2.pause();
+      a1.currentTime = 0; a2.currentTime = 0;
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+[12-May-2025 10:47:40 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/asfourmy/public_html/proses.php on line 3
+[12-May-2025 11:38:48 UTC] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'asfourmy_aspourempeka'@'10.1.1.176' (using password: YES) in /home/asfourmy/public_html/login.php on line 3
+[12-May-2025 11:57:18 UTC] PHP Warning:  mysqli::__construct(): (HY000/1044): Access denied for user 'asfourmy_aspourempeka'@'185-219-132-48.cprapid.com' to database 'asfourmy_aspourempeka' in /home/asfourmy/public_html/proses.php on line 3
+[26-May-2025 10:21:28 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection refused in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 03:39:38 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 04:03:26 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 04:03:58 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 04:11:41 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 04:12:41 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 05:01:52 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 05:03:02 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 05:04:02 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 05:05:02 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 05:06:02 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:35:26 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:35:47 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:36:29 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 09:36:47 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:36:49 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 09:37:47 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:37:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 09:38:49 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:39:46 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 09:39:49 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:40:47 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 09:40:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:42:48 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:43:09 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 09:43:49 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:44:14 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 09:44:49 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:45:49 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:46:49 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:47:20 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/proses.php on line 3
+[30-May-2025 09:47:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:48:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:49:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:50:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:51:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:52:28 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:52:50 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:53:31 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:53:57 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:54:31 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:54:57 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:55:57 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:57:19 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/futaridakeno.php on line 3
+[30-May-2025 09:58:46 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/dorimutaimu.php on line 8
+[30-May-2025 09:59:46 UTC] PHP Warning:  mysqli::__construct(): (HY000/2002): Connection timed out in /home/asfourmy/public_html/dorimutaimu.php on line 8

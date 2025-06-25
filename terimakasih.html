@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terima Kasih Telah Mengisi ASFOUR 2025</title>
+  <link rel="icon" type="image/png" href="images/icon asfour.png">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('images/asfour.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .thanks-page {
+      text-align: center;
+      padding: 40px;
+      border-radius: 12px;
+      background-color: rgba(255, 255, 255, 0.85);
+      box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+      transform: scale(1);
+      animation: fadeIn 1s forwards, scaleUp 0.5s 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.9);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    .thanks-icon {
+      font-size: 60px;
+      color: green;
+      margin-bottom: 20px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    h1 {
+      font-size: 30px;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      color: #555;
+      transition: color 0.5s;
+    }
+
+    p:hover {
+      color: #007BFF;
+      cursor: pointer;
+    }
+
+    /* Media Query for devices with width <= 1024px (tablets and small laptops) */
+    @media (max-width: 1024px) {
+      .thanks-page {
+        padding: 30px;
+      }
+
+      .thanks-icon {
+        font-size: 50px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+
+    /* Media Query for devices with width <= 768px (tablets and mobile) */
+    @media (max-width: 768px) {
+      .thanks-page {
+        padding: 25px;
+      }
+
+      .thanks-icon {
+        font-size: 45px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+    }
+
+    /* Media Query for devices with width <= 480px (small mobile devices) */
+    @media (max-width: 480px) {
+      .thanks-page {
+        padding: 20px;
+      }
+
+      .thanks-icon {
+        font-size: 40px;
+      }
+
+      h1 {
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thanks-page">
+    <div class="thanks-icon">✅</div>
+    <h1>Terima Kasih Telah Mengisi ASFOUR MMXXV!</h1>
+    <p>Jawaban kamu telah berhasil dikirim. Kami sangat menghargai partisipasimu!</p>
+    <audio id="bg-music" src="music/fft.MP3" loop autoplay></audio>
+  </div>
+
+  <script>
+    // Redirect ke index.html jika halaman di-reload
+    if (window.performance.getEntriesByType("navigation")[0].type === "reload") {
+      window.location.href = "index.html";
+    }
+
+    // Fade in volume saat halaman dimuat
+    window.addEventListener('DOMContentLoaded', () => {
+      const audio = document.getElementById("bg-music");
+      let volume = 0;
+      audio.volume = volume;
+      audio.muted = false;
+
+      const fadeIn = setInterval(() => {
+        if (volume < 1.0) {
+          volume += 0.02;
+          audio.volume = volume;
+        } else {
+          clearInterval(fadeIn);
+        }
+      }, 100);
+    });
+  </script>
+</body>
+</html>
